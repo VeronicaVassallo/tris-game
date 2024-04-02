@@ -1,0 +1,37 @@
+.background {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(140, 177, 134);
+}
+
+.rowGrid {
+	display: flex;
+	justify-content: center;
+}
+
+.rowGrid > div {
+	width: 150px;
+	height: 150px;
+	background-color: rgb(78, 135, 69);
+	margin: 5px;
+}
+
+/**/
+.cross {
+	position: relative;
+	z-index: 2;
+	font-size: 80pt;
+	color: coral;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.circle {
+	position: relative;
+	z-index: 3;
+	top: -10px;
+	font-size: 90pt;
+	color: blue;
+}
