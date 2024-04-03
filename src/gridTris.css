@@ -1,8 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 .background {
 	width: 100vw;
 	height: 100vh;
-	background-color: rgb(140, 177, 134);
-	background-image: url("https://img.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg?size=626&ext=jpg&ga=GA1.1.1908636980.1712102400&semt=ais");
+	padding-top: 2%;
+	background-color: rgb(18, 18, 18);
+	color: rgb(255, 0, 255);
 }
 
 .rowGrid {
@@ -11,10 +17,15 @@
 }
 
 .rowGrid > div {
-	width: 130px;
-	height: 130px;
-	background-color: rgb(106, 139, 101);
+	width: 150px;
+	height: 150px;
+	background-color: rgb(18, 18, 18);
 	margin: 5px;
+	border: solid 5px rgb(255, 0, 255);
+	box-shadow: 7px 7px 19px 9px rgba(255, 0, 255, 0.64);
+}
+.rowGrid > div:hover {
+	background-color: rgb(96, 93, 93);
 }
 
 /**/
@@ -22,7 +33,7 @@
 	position: relative;
 	z-index: 2;
 	font-size: 80pt;
-	color: coral;
+	color: rgb(234, 255, 0);
 	opacity: 2;
 }
 
@@ -35,13 +46,24 @@
 	z-index: 3;
 	top: -10px;
 	font-size: 90pt;
-	color: blue;
+	color: rgb(0, 255, 238);
 }
 
 /*Navbar*/
+.backgroundNav {
+	background: rgb(118, 79, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(118, 79, 0, 1) 0%,
+		rgb(255, 0, 255) 0%,
+		rgba(255, 243, 0, 1) 100%
+	);
+	padding: 2%;
+}
 .containerPlayerNav {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	color: blueviolet;
 }
 

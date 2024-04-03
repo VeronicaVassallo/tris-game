@@ -1,12 +1,18 @@
 import "../gridTris.css";
 import { ButtonRedresh } from "./ButtonRefresh";
+
+import { useContext, useState } from "react";
+import { PlayerContext } from "../contexts/PlayerContext";
+
 type Navprops = {
 	title: string;
 };
 
 export const Navbar = (props: Navprops) => {
+	const dataPlayers = useContext(PlayerContext);
+
 	return (
-		<div>
+		<div className="backgroundNav">
 			<h1>{props.title}</h1>
 			<div className="containerPlayerNav">
 				<div>

@@ -4,7 +4,6 @@ import "../gridTris.css";
 //Context
 import { useContext } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
-import { escape } from "querystring";
 
 type PropsCell = {
 	positionCell: number;
