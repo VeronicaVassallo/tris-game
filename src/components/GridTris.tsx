@@ -3,7 +3,7 @@ import Cell from "./Cell";
 
 /*8) importo useContext --> metodo che mi permette di usare il dato dentro il context.
 PlayerContext --> la constante che gli avevo dato come valore inziale il player*/
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
 
 /*TO DO:
@@ -20,16 +20,15 @@ export const GridTris: React.FC = () => {
 
 	return (
 		<>
-			{
-				/*TO DO: sistema questo terniaro, il player corrente non viene aggiornato */
-				dataPlayers.player === 1 ? (
-					<h2>Tocca al giocatore 1 CROCE</h2>
-				) : (
-					<h2>Tocca al giocatore 2 CERCHIO</h2>
-				)
-			}
-
 			<div className="background">
+				{
+					/*TO DO: sistema questo terniaro, il player corrente non viene aggiornato */
+					dataPlayers.player === 1 ? (
+						<h2>Tocca al giocatore 1 CROCE</h2>
+					) : (
+						<h2>Tocca al giocatore 2 Cerchio</h2>
+					)
+				}
 				<div>
 					<div className="rowGrid">
 						<Cell positionCell={1} />
