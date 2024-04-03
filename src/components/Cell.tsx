@@ -33,7 +33,6 @@ const Cell = (props: PropsCell) => {
 	};
 	return (
 		<>
-			<span>{props.positionCell}</span>
 			<div onClick={addSign}>
 				{box1 === 1 ? <div className="cross">{cross}</div> : ""}
 				{box1 === 2 ? <div className="circle">{circle}</div> : ""}

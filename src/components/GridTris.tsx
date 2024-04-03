@@ -23,12 +23,13 @@ export const GridTris: React.FC = () => {
 			<div className="background">
 				{
 					/*TO DO: sistema questo terniaro, il player corrente non viene aggiornato */
-					dataPlayers.player === 1 ? (
-						<h2>Tocca al giocatore 1 CROCE</h2>
-					) : (
+					dataPlayers.player === 2 ? (
 						<h2>Tocca al giocatore 2 Cerchio</h2>
+					) : (
+						<h2>Tocca al giocatore 1 Croce</h2>
 					)
 				}
+
 				<div>
 					<div className="rowGrid">
 						<Cell positionCell={1} />

@@ -2,6 +2,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(140, 177, 134);
+	background-image: url("https://img.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg?size=626&ext=jpg&ga=GA1.1.1908636980.1712102400&semt=ais");
 }
 
 .rowGrid {
@@ -10,9 +11,9 @@
 }
 
 .rowGrid > div {
-	width: 150px;
-	height: 150px;
-	background-color: rgb(78, 135, 69);
+	width: 130px;
+	height: 130px;
+	background-color: rgb(106, 139, 101);
 	margin: 5px;
 }
 
@@ -22,6 +23,7 @@
 	z-index: 2;
 	font-size: 80pt;
 	color: coral;
+	opacity: 2;
 }
 
 .hidden {
@@ -34,4 +36,27 @@
 	top: -10px;
 	font-size: 90pt;
 	color: blue;
+}
+
+/*Navbar*/
+.containerPlayerNav {
+	display: flex;
+	justify-content: space-around;
+	color: blueviolet;
+}
+
+.buttonRefresh {
+	width: 8%;
+	height: 30px;
+	padding: 5px;
+	align-content: center;
+	background-color: chocolate;
+	border-radius: 25px;
+	cursor: pointer;
+	color: azure;
+}
+
+.buttonRefresh:hover {
+	background-color: rgb(245, 230, 11);
+	color: chocolate;
 }
