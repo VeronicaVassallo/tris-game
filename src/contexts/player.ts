@@ -21,9 +21,6 @@ export const dataPlayers = {
 	//metodo che mi setta il valore della posizione della cella
 	//Per ciascuna cella tris gli do il valore del player corrente (1 o 2)
 	setPosition(cellaCorrente: number, playerCorrente: number) {
-		if (cellaCorrente === 1) {
-			this.valueCell1 = playerCorrente;
-		}
 		switch (cellaCorrente) {
 			case 1:
 				this.valueCell1 = playerCorrente;
