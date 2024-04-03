@@ -84,6 +84,41 @@ export const dataPlayers = {
 		) {
 			isWinner = true;
 		}
+		if (
+			this.valueCell1 === playerCurrent &&
+			this.valueCell4 === playerCurrent &&
+			this.valueCell7 === playerCurrent
+		) {
+			isWinner = true;
+		}
+		if (
+			this.valueCell2 === playerCurrent &&
+			this.valueCell5 === playerCurrent &&
+			this.valueCell8 === playerCurrent
+		) {
+			isWinner = true;
+		}
+		if (
+			this.valueCell3 === playerCurrent &&
+			this.valueCell6 === playerCurrent &&
+			this.valueCell9 === playerCurrent
+		) {
+			isWinner = true;
+		}
+		if (
+			this.valueCell1 === playerCurrent &&
+			this.valueCell5 === playerCurrent &&
+			this.valueCell9 === playerCurrent
+		) {
+			isWinner = true;
+		}
+		if (
+			this.valueCell3 === playerCurrent &&
+			this.valueCell5 === playerCurrent &&
+			this.valueCell7 === playerCurrent
+		) {
+			isWinner = true;
+		}
 
 		return isWinner;
 	},

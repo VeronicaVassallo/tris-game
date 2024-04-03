@@ -12,6 +12,7 @@ B) nel componente Cell aggiungi alla fuzione addSign la possibilita di modificar
 cosi da creare una turnazione automatica.FATTO
 C) se la casella è occupata non ti permette di selezionarla
 D)controlli per vedere chi vince
+E)Tasto di refresh pagina
  */
 
 export const GridTris: React.FC = () => {
