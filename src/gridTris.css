@@ -35,6 +35,7 @@
 	font-size: 80pt;
 	color: rgb(234, 255, 0);
 	opacity: 2;
+	background-color: #8012ac;
 }
 
 .hidden {
@@ -44,9 +45,9 @@
 .circle {
 	position: relative;
 	z-index: 3;
-	top: -10px;
-	font-size: 90pt;
+	font-size: 80pt;
 	color: rgb(0, 255, 238);
+	background-color: rgb(238, 170, 22);
 }
 
 /*Navbar*/
