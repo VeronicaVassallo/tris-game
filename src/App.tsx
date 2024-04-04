@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div className="App">
 			<PlayerContextProvaider>
-				<Navbar title="Benvenuti al gioco del Tris" />
+				<Navbar title="Benvenuti al gioco del TRIS" />
 				<GridTris />
 			</PlayerContextProvaider>
 		</div>

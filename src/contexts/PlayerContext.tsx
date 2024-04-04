@@ -16,7 +16,7 @@ resto dell' applicazione, mi bastera inserirli al suo interno come props-childre
 7)guarda il file App.tsx
 8) Vado ad predermi e utilizzare il dato condiviso esempio: guarda il file GridTris.tsx*/
 
-import React, { createContext, useState } from "react"; //2
+import React, { createContext } from "react"; //2
 import { dataPlayers } from "./player"; //3
 
 type PlayerContextProviderProps = {
