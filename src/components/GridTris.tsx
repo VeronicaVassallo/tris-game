@@ -16,7 +16,7 @@ E)Tasto di refresh pagina
  */
 
 export const GridTris: React.FC = () => {
-	const dataPlayers = useContext(PlayerContext); //8) facendo cosi il dato del contest lo inserisco dentro questa constante
+	const { current, setCurrent } = useContext(PlayerContext); //8) facendo cosi il dato del contest lo inserisco dentro questa constante
 
 	return (
 		<>

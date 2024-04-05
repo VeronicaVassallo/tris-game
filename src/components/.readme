@@ -1,0 +1,14 @@
+Tris - WORK in Progress
+
+Progetto ispirato al gioco del tris.
+
+Per realizzare questo progetto ho usato la tecnologia di react in combinazione con
+Typescript, e l'utilizzo del context. Tra le varie features presenti nel gioco:
+
+-l'alternaza automatica tra player1 (x) e player2(O), ogni volta che il giocatore esegue una mossa.
+Per fare cio' all'interno del context ho realizzato un metodo ingrado di aggiornare il valore del player.
+
+-Ogni volta che il player fa una mossa il valore ,in base a player corrispondente, vine aggiornato all'interno
+di una celle specifica della griglia.
+
+-Operazione di controllo per verificare se uno dei players ha vinto.

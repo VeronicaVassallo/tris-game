@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "../gridTris.css";
 
 //Context
@@ -10,7 +10,8 @@ type PropsCell = {
 };
 
 const Cell = (props: PropsCell) => {
-	let dataPlayers = useContext(PlayerContext);
+	const { current, setCurrent, changePlayerCurrent, setPosition, checkWinner } =
+		useContext(PlayerContext);
 	const cross: string = "X";
 	const circle: string = "O";
 
@@ -20,25 +21,29 @@ const Cell = (props: PropsCell) => {
 		/*Il primo controllo vede se la cella gli è stata gia attribuita un valore, se il
 		valore è ancora 0 puo assegnargli la x(1) o il O(2), se box risulta avere un valore diverso da zero
 		non deve fare nulla, non ti da la possibilita di cliccare*/
+		/*TO DO: Controllare perche isWinner scatta prima che setPosition abbia finito di settare la
+		posizione del vincitore */
 		if (box === 0) {
-			if (dataPlayers.player === 1) {
+			if (current === 1) {
 				setbox(1);
-			} else if (dataPlayers.player === 2) {
+				changePlayerCurrent();
+			} else if (current === 2) {
 				setbox(2);
+				changePlayerCurrent();
 			}
 
-			dataPlayers.setPosition(props.positionCell, dataPlayers.player);
-			let isWinner = dataPlayers.checkWinner(dataPlayers.player);
+			setPosition(props.positionCell, current);
+			let isWinner = checkWinner(current);
 			{
 				if (isWinner) {
-					alert(`Vince il giocatore ${dataPlayers.player}`);
-					window.location.reload();
+					alert(`Vince il giocatore ${current}`);
 				} else {
-					dataPlayers.changePlayerCurrent();
+					changePlayerCurrent();
 				}
 			}
 		}
 	};
+
 	return (
 		<>
 			<div onClick={addSign}>

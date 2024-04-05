@@ -1,7 +1,7 @@
 import "../gridTris.css";
 import { ButtonRedresh } from "./ButtonRefresh";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
 
 type Navprops = {
@@ -9,20 +9,7 @@ type Navprops = {
 };
 
 export const Navbar = (props: Navprops) => {
-	const dataPlayers = useContext(PlayerContext);
-	const [current, setCurrent] = useState(0);
-
-	const changeCurrent = (): void => {
-		if (dataPlayers.player === 1) {
-			setCurrent(1);
-		} else if (dataPlayers.player === 2) {
-			setCurrent(2);
-		}
-	};
-
-	useEffect(() => {
-		changeCurrent();
-	}, [dataPlayers.player]);
+	const { current, setCurrent } = useContext(PlayerContext);
 
 	return (
 		<div className="backgroundNav">
