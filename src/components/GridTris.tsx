@@ -10,9 +10,9 @@ import { PlayerContext } from "../contexts/PlayerContext";
 A) gestione turno gioco, metti il player nel contest cosi che possa essere modificato in qualsia celletta FATTO
 B) nel componente Cell aggiungi alla fuzione addSign la possibilita di modificare il player ad ogni turno, 
 cosi da creare una turnazione automatica.FATTO
-C) se la casella è occupata non ti permette di selezionarla
-D)controlli per vedere chi vince
-E)Tasto di refresh pagina
+C) se la casella è occupata non ti permette di selezionarla Fatto
+D)controlli per vedere chi vince CAPIRE DOVE E' L'ERRORE
+E)Tasto di refresh pagina FATTO
  */
 
 export const GridTris: React.FC = () => {
