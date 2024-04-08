@@ -10,7 +10,7 @@ type PropsCell = {
 };
 
 const Cell = (props: PropsCell) => {
-	const { current, setCurrent, changePlayerCurrent, setPosition, checkWinner } =
+	const { current, setCurrent, changePlayerCurrent, setPosition } =
 		useContext(PlayerContext);
 	const cross: string = "X";
 	const circle: string = "O";
@@ -33,14 +33,14 @@ const Cell = (props: PropsCell) => {
 			}
 
 			setPosition(props.positionCell, current);
-			let isWinner = checkWinner(current);
+			/*let isWinner = checkWinner(current);
 			{
 				if (isWinner) {
 					alert(`Vince il giocatore ${current}`);
 				} else {
 					changePlayerCurrent();
 				}
-			}
+			}*/
 		}
 	};
 

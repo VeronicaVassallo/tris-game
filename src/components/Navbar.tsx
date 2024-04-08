@@ -15,24 +15,23 @@ export const Navbar = (props: Navprops) => {
 		<div className="backgroundNav">
 			<h1>{props.title}</h1>
 			<div className="containerPlayerNav">
-				{current === 1 ? (
-					<div className="playerCurrent">
-						<p>Giocatore 1</p>
-						<h2>X</h2>
-					</div>
-				) : (
-					""
-				)}
+				<div
+					className={
+						current === 1
+							? "playerCurrent playerCurrentBase"
+							: "playerCurrentBase"
+					}
+				>
+					<p>{current === 1 ? "Tocca: " : ""}Giocatore 1</p>
+					<h2>X</h2>
+				</div>
 
 				<ButtonRedresh />
-				{current === 2 ? (
-					<div className="playerCurrent">
-						<p>Giocatore 2</p>
-						<h2>O</h2>
-					</div>
-				) : (
-					""
-				)}
+
+				<div className={current === 2 ? "playerCurrent" : ""}>
+					<p>{current === 2 ? "Tocca: " : ""}Giocatore 2</p>
+					<h2>O</h2>
+				</div>
 			</div>
 		</div>
 	);

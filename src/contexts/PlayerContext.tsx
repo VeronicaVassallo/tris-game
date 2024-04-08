@@ -25,7 +25,16 @@ interface MyContext {
 	setCurrent: Dispatch<React.SetStateAction<number>>;
 	changePlayerCurrent: () => void;
 	setPosition: (cellaCorrente: number, playerCorrente: number) => void;
-	checkWinner: (playerCurrent: number) => boolean;
+	valueCell1: number;
+	valueCell2: number;
+	valueCell3: number;
+	valueCell4: number;
+	valueCell5: number;
+	valueCell6: number;
+	valueCell7: number;
+	valueCell8: number;
+	valueCell9: number;
+	//checkWinner: (playerCurrent: number) => boolean;
 }
 
 type PlayerContextProviderProps = {
@@ -37,7 +46,16 @@ export const PlayerContext = createContext<MyContext>({
 	setCurrent: () => {},
 	changePlayerCurrent: () => {},
 	setPosition: (cellaCorrente: number, playerCorrente: number) => {},
-	checkWinner: (playerCurrent: number) => false,
+	//checkWinner: (playerCurrent: number) => false,
+	valueCell1: 0,
+	valueCell2: 0,
+	valueCell3: 0,
+	valueCell4: 0,
+	valueCell5: 0,
+	valueCell6: 0,
+	valueCell7: 0,
+	valueCell8: 0,
+	valueCell9: 0,
 }); //5)
 
 export const PlayerContextProvaider = ({
@@ -104,7 +122,7 @@ export const PlayerContextProvaider = ({
 
 	//check vincitore passo come parametro il playerCorrente
 	//confrontanto tra loro i vari valori della cella controllo chi ha vinto
-	const checkWinner = (playerCurrent: number): boolean => {
+	/*const checkWinner = (playerCurrent: number): boolean => {
 		let isWinner = false;
 		if (
 			valueCell1 === current &&
@@ -166,6 +184,7 @@ export const PlayerContextProvaider = ({
 
 		return isWinner;
 	};
+	*/
 
 	return (
 		<PlayerContext.Provider
@@ -174,7 +193,15 @@ export const PlayerContextProvaider = ({
 				setCurrent,
 				changePlayerCurrent,
 				setPosition,
-				checkWinner,
+				valueCell1,
+				valueCell2,
+				valueCell3,
+				valueCell4,
+				valueCell5,
+				valueCell6,
+				valueCell7,
+				valueCell8,
+				valueCell9,
 			}}
 		>
 			{children}

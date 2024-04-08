@@ -3,7 +3,7 @@ import Cell from "./Cell";
 
 /*8) importo useContext --> metodo che mi permette di usare il dato dentro il context.
 PlayerContext --> la constante che gli avevo dato come valore inziale il player*/
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
 
 /*TO DO:
@@ -16,11 +16,73 @@ E)Tasto di refresh pagina FATTO
  */
 
 export const GridTris: React.FC = () => {
-	const { current, setCurrent } = useContext(PlayerContext); //8) facendo cosi il dato del contest lo inserisco dentro questa constante
+	const {
+		current,
+
+		valueCell1,
+		valueCell2,
+		valueCell3,
+		valueCell4,
+		valueCell5,
+		valueCell6,
+		valueCell7,
+		valueCell8,
+		valueCell9,
+	} = useContext(PlayerContext);
+	const [isWinner, setIsWinner] = useState(-1);
+
+	let checkWinner = () => {
+		debugger;
+		if (
+			(valueCell1 === 1 && valueCell2 === 1 && valueCell3 === 1) ||
+			(valueCell4 === 1 && valueCell5 === 1 && valueCell6 === 1) ||
+			(valueCell7 === 1 && valueCell8 === 1 && valueCell9 === 1) ||
+			(valueCell1 === 1 && valueCell5 === 1 && valueCell9 === 1) ||
+			(valueCell3 === 1 && valueCell5 === 1 && valueCell7 === 1) ||
+			(valueCell1 === 1 && valueCell4 === 1 && valueCell7 === 1) ||
+			(valueCell2 === 1 && valueCell5 === 1 && valueCell8 === 1) ||
+			(valueCell3 === 1 && valueCell6 === 1 && valueCell9 === 1)
+		) {
+			setIsWinner(1);
+		} else if (
+			(valueCell1 === 2 && valueCell2 === 2 && valueCell3 === 2) ||
+			(valueCell4 === 2 && valueCell5 === 2 && valueCell6 === 2) ||
+			(valueCell7 === 2 && valueCell8 === 2 && valueCell9 === 2) ||
+			(valueCell1 === 2 && valueCell5 === 2 && valueCell9 === 2) ||
+			(valueCell3 === 2 && valueCell5 === 2 && valueCell7 === 2) ||
+			(valueCell1 === 2 && valueCell4 === 2 && valueCell7 === 2) ||
+			(valueCell2 === 2 && valueCell5 === 2 && valueCell8 === 2) ||
+			(valueCell3 === 2 && valueCell6 === 2 && valueCell9 === 2)
+		) {
+			setIsWinner(2);
+		}
+	};
+
+	useEffect(() => {
+		checkWinner();
+	}, [
+		current,
+		valueCell1,
+		valueCell2,
+		valueCell3,
+		valueCell4,
+		valueCell5,
+		valueCell6,
+		valueCell7,
+		valueCell8,
+		valueCell9,
+	]);
 
 	return (
 		<>
 			<div className="background">
+				{isWinner !== -1 && isWinner === 1 && (
+					<p className="playerCurrent">VINCE 1</p>
+				)}
+				{isWinner !== -1 && isWinner === 2 && (
+					<p className="playerCurrent">VINCE 2</p>
+				)}
+
 				<div>
 					<div className="rowGrid">
 						<Cell positionCell={1} />
