@@ -1,8 +1,7 @@
 import "../gridTris.css";
 import Cell from "./Cell";
+import { ModalShowWinner } from "./ModalShowWinner";
 
-/*8) importo useContext --> metodo che mi permette di usare il dato dentro il context.
-PlayerContext --> la constante che gli avevo dato come valore inziale il player*/
 import { useContext, useEffect, useState } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
 
@@ -13,6 +12,7 @@ cosi da creare una turnazione automatica.FATTO
 C) se la casella è occupata non ti permette di selezionarla Fatto
 D)controlli per vedere chi vince CAPIRE DOVE E' L'ERRORE
 E)Tasto di refresh pagina FATTO
+F) Disegnare il logo e introdurre possibili animazioni
  */
 
 export const GridTris: React.FC = () => {
@@ -32,7 +32,6 @@ export const GridTris: React.FC = () => {
 	const [isWinner, setIsWinner] = useState(-1);
 
 	let checkWinner = () => {
-		debugger;
 		if (
 			(valueCell1 === 1 && valueCell2 === 1 && valueCell3 === 1) ||
 			(valueCell4 === 1 && valueCell5 === 1 && valueCell6 === 1) ||
@@ -76,12 +75,8 @@ export const GridTris: React.FC = () => {
 	return (
 		<>
 			<div className="background">
-				{isWinner !== -1 && isWinner === 1 && (
-					<p className="playerCurrent">VINCE 1</p>
-				)}
-				{isWinner !== -1 && isWinner === 2 && (
-					<p className="playerCurrent">VINCE 2</p>
-				)}
+				{isWinner !== -1 && isWinner === 1 && <ModalShowWinner player={1} />}
+				{isWinner !== -1 && isWinner === 2 && <ModalShowWinner player={2} />}
 
 				<div>
 					<div className="rowGrid">

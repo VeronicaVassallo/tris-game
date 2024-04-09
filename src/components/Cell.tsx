@@ -33,14 +33,6 @@ const Cell = (props: PropsCell) => {
 			}
 
 			setPosition(props.positionCell, current);
-			/*let isWinner = checkWinner(current);
-			{
-				if (isWinner) {
-					alert(`Vince il giocatore ${current}`);
-				} else {
-					changePlayerCurrent();
-				}
-			}*/
 		}
 	};
 

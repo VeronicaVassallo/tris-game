@@ -11,4 +11,6 @@ Per fare cio' all'interno del context ho realizzato un metodo ingrado di aggiorn
 -Ogni volta che il player fa una mossa il valore ,in base a player corrispondente, vine aggiornato all'interno
 di una celle specifica della griglia.
 
--Operazione di controllo per verificare se uno dei players ha vinto.
+-Operazione di controllo per verificare se uno dei players ha vinto. FATTO
+
+-Impedisci al giocatori che una volta che hanno finito la partita di clicchare sulle tabelle

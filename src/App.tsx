@@ -2,8 +2,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { GridTris } from "./components/GridTris";
 
-import { PlayerContextProvaider } from "./contexts/PlayerContext"; //7)
-//7) utilizzo come Provider (riga 11 a 14) tutti i componenti al suo interno potranno accedere ai suoi dati.
+import { PlayerContextProvaider } from "./contexts/PlayerContext";
 
 function App() {
 	return (
