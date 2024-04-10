@@ -106,7 +106,7 @@
 /*ModalShowWinner*/
 .containerModal {
 	width: 100vw;
-	height: 120vh;
+	height: 137vh;
 	background-color: black;
 	position: absolute;
 	top: 0%;
@@ -116,8 +116,8 @@
 .cardModal {
 	position: absolute;
 	z-index: 6;
-	margin-left: 20%;
-	width: 60%;
+	margin-left: 25%;
+	width: 50%;
 	height: 60%;
 	background-color: beige;
 	opacity: 5;
@@ -127,12 +127,75 @@
 
 .titleCardModal {
 	padding-top: 5px;
+	font-weight: 900;
+	font-size: xx-large;
 }
-.XWinner {
-	font-size: 90pt;
-	font-weight: bolder;
-}
+
 .buttonModal {
 	display: flex;
 	justify-content: center;
+}
+
+/*Winner*/
+.containerWinner {
+	margin: auto;
+	height: 90%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+.sign {
+	font-size: 90pt;
+	font-weight: bolder;
+	padding: 0px;
+	margin: 0px;
+}
+.containerPodium1 {
+	margin-top: 0px;
+	width: 100%;
+	height: 160px;
+	background-color: rgb(71, 53, 3);
+	color: #fff;
+}
+.containerPodium2 {
+	width: 100%;
+	height: 120px;
+	background-color: rgb(71, 53, 3);
+	color: #fff;
+}
+.first {
+	translate: 0px 30px;
+	animation: jump 2s ease-in-out infinite alternate-reverse;
+}
+.second {
+	translate: 0px 30px;
+}
+
+@keyframes jump {
+	from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY(-30px);
+	}
+}
+
+/*Media query*/
+@media screen and (max-width: 570px) {
+	.cardModal {
+		width: 80%;
+		height: 70%;
+		margin-left: 10%;
+	}
+	.containerModal {
+		height: 130vh;
+	}
+}
+
+@media screen and (min-width: 1400) {
+	.cardModal {
+		width: 100%;
+	}
 }

@@ -1,16 +1,36 @@
-Tris - WORK in Progress
+Tris - Tic Tac Toe
 
 Progetto ispirato al gioco del tris.
 
-Per realizzare questo progetto ho usato la tecnologia di react in combinazione con
+Per realizzare questo progetto ho usato le tecnologie quali react in combinazione con
 Typescript, e l'utilizzo del context. Tra le varie features presenti nel gioco:
 
--l'alternaza automatica tra player1 (x) e player2(O), ogni volta che il giocatore esegue una mossa.
-Per fare cio' all'interno del context ho realizzato un metodo ingrado di aggiornare il valore del player.
+-l'alternaza automatica tra player1 (x) e player2(O). Ogni volta che il giocatore esegue una mossa, il sistema
+in automatica alterna i due player. Per fare cio' all'interno del context ho realizzato un metodo ingrado di aggiornare il valore del player.
 
--Ogni volta che il player fa una mossa il valore ,in base a player corrispondente, vine aggiornato all'interno
-di una celle specifica della griglia.
+-Ogni volta che il player fa una mossa il valore del suo segno , X(1) e Y(2), viene assegnato man mano alle varie
+celle della griglia in base a player corrispondente.
 
--Operazione di controllo per verificare se uno dei players ha vinto. FATTO
+-Operazione di controllo per verificare se uno dei players ha vinto.
 
--Impedisci al giocatori che una volta che hanno finito la partita di clicchare sulle tabelle
+-Controllo che impedisce ai giocari di selezionare una cella precedentemente selezionata.
+
+-Modale che mostra il player con il rispettivo segno che ha vinto.
+
+Tris-
+Project inspired by the game of tic tac toe
+
+This project is made by different types of technologies like React with
+the programming language of Typescript. In this case I have used the context of React to spread information throughout the application.
+
+Game features:
+
+-Possibility to switch from one player to another automatically. To do this, inside the Context I created a method capable of updating the player value.
+
+-Every time the player makes a move, the value of his sign, X(1) or Y(2), is assigned to a cell.
+
+-Check to see who the winner is.
+
+-Control that prevents players from selecting a previously selected cell.
+
+-Modal showing the player who has won.
